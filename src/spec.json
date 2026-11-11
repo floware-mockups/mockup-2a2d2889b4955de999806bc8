@@ -1,0 +1,256 @@
+{
+  "title": "Gestione delle segnalazioni URP",
+  "description": "Prototipo per registrare segnalazioni, reclami e suggerimenti inventati, assegnarli agli uffici e monitorare le scadenze di risposta.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "cruscotto",
+      "title": "Cruscotto",
+      "description": "Panoramica delle segnalazioni e dei tempi di risposta.",
+      "metrics": [
+        {
+          "label": "Segnalazioni aperte",
+          "value": "18"
+        },
+        {
+          "label": "In attesa di assegnazione",
+          "value": "4"
+        },
+        {
+          "label": "Risposte entro scadenza",
+          "value": "92%"
+        },
+        {
+          "label": "Tempo medio di risposta",
+          "value": "8 giorni"
+        },
+        {
+          "label": "In scadenza entro 7 giorni",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Stato",
+        "Numero"
+      ],
+      "rows": [
+        [
+          "Nuova",
+          "4"
+        ],
+        [
+          "In lavorazione",
+          "11"
+        ],
+        [
+          "Risposta inviata",
+          "26"
+        ],
+        [
+          "Chiusa",
+          "9"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "segnalazioni",
+      "title": "Segnalazioni",
+      "description": "Elenco filtrabile per stato, canale, argomento e ufficio. La scadenza di risposta è calcolata a 30 giorni dalla data di ricezione.",
+      "metrics": [],
+      "columns": [
+        "Codice",
+        "Cittadino",
+        "Canale",
+        "Argomento",
+        "Ufficio competente",
+        "Data ricezione",
+        "Scadenza risposta",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "SG-1042",
+          "Lumo Riva",
+          "Sportello",
+          "Illuminazione pubblica",
+          "Manutenzioni",
+          "2026-04-03",
+          "2026-05-03",
+          "In lavorazione"
+        ],
+        [
+          "SG-1043",
+          "Nubi Serra",
+          "Telefono",
+          "Raccolta rifiuti",
+          "Ambiente",
+          "2026-04-05",
+          "2026-05-05",
+          "Nuova"
+        ],
+        [
+          "SG-1044",
+          "Vela Orsi",
+          "Sportello",
+          "Viabilità",
+          "Mobilità",
+          "2026-04-07",
+          "2026-05-07",
+          "In lavorazione"
+        ],
+        [
+          "SG-1045",
+          "Timo Lari",
+          "Email",
+          "Aree verdi",
+          "Ambiente",
+          "2026-04-09",
+          "2026-05-09",
+          "Nuova"
+        ],
+        [
+          "SG-1046",
+          "Mira Soli",
+          "Telefono",
+          "Accessibilità",
+          "Servizi al cittadino",
+          "2026-04-11",
+          "2026-05-11",
+          "Risposta inviata"
+        ],
+        [
+          "SG-1047",
+          "Eolo Neri",
+          "Sportello",
+          "Illuminazione pubblica",
+          "Manutenzioni",
+          "2026-04-13",
+          "2026-05-13",
+          "In lavorazione"
+        ],
+        [
+          "SG-1048",
+          "Duna Fiori",
+          "Email",
+          "Raccolta rifiuti",
+          "Ambiente",
+          "2026-04-15",
+          "2026-05-15",
+          "Nuova"
+        ],
+        [
+          "SG-1049",
+          "Leda Bruni",
+          "Telefono",
+          "Viabilità",
+          "Mobilità",
+          "2026-04-17",
+          "2026-05-17",
+          "Chiusa"
+        ],
+        [
+          "SG-1050",
+          "Rumo Valli",
+          "Sportello",
+          "Aree verdi",
+          "Ambiente",
+          "2026-04-19",
+          "2026-05-19",
+          "In lavorazione"
+        ],
+        [
+          "SG-1051",
+          "Sira Meli",
+          "Email",
+          "Accessibilità",
+          "Servizi al cittadino",
+          "2026-04-21",
+          "2026-05-21",
+          "Nuova"
+        ]
+      ],
+      "form": [
+        "Codice",
+        "Cittadino",
+        "Canale",
+        "Argomento",
+        "Ufficio competente",
+        "Data ricezione",
+        "Scadenza risposta",
+        "Stato"
+      ]
+    },
+    {
+      "id": "nuova-segnalazione",
+      "title": "Nuova segnalazione",
+      "description": "Registra una segnalazione inventata e assegna un ufficio competente; la scadenza viene proposta a 30 giorni dalla ricezione.",
+      "metrics": [],
+      "columns": [
+        "Codice",
+        "Cittadino",
+        "Canale",
+        "Argomento",
+        "Ufficio competente",
+        "Data ricezione",
+        "Scadenza risposta",
+        "Stato"
+      ],
+      "rows": [],
+      "form": [
+        "Codice",
+        "Cittadino",
+        "Canale",
+        "Argomento",
+        "Ufficio competente",
+        "Data ricezione",
+        "Scadenza risposta",
+        "Stato"
+      ]
+    },
+    {
+      "id": "uffici",
+      "title": "Uffici competenti",
+      "description": "Riepilogo filtrabile del carico di lavoro per ufficio.",
+      "metrics": [],
+      "columns": [
+        "Ufficio",
+        "Segnalazioni aperte",
+        "In scadenza",
+        "Tempo medio di risposta",
+        "Referente di fantasia"
+      ],
+      "rows": [
+        [
+          "Manutenzioni",
+          "5",
+          "1",
+          "7 giorni",
+          "Lumo Valli"
+        ],
+        [
+          "Ambiente",
+          "7",
+          "1",
+          "9 giorni",
+          "Nubi Fiori"
+        ],
+        [
+          "Mobilità",
+          "3",
+          "0",
+          "8 giorni",
+          "Vela Serra"
+        ],
+        [
+          "Servizi al cittadino",
+          "3",
+          "1",
+          "6 giorni",
+          "Timo Orsi"
+        ]
+      ],
+      "form": []
+    }
+  ]
+}
